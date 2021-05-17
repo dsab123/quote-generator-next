@@ -21,7 +21,7 @@ const initialState: Backgrounds = {
 };
 
 const unsplashApiClient = createApi({
-    accessKey: `${process.env.REACT_APP_UNSPLASH_API_KEY}`
+    accessKey: `${process.env.NEXT_PUBLIC_UNSPLASH_API_KEY}`
   });
 
 export const backgrounds = createSlice({

@@ -1,7 +1,7 @@
 import { CreateQuote } from './QuoteFactory';
 import { Quote } from '../types';
 const faunadb = require('faunadb');
-const faunaClient = new faunadb.Client({ secret: `${process.env.REACT_APP_FAUNA_API_KEY}` });
+const faunaClient = new faunadb.Client({ secret: `${process.env.NEXT_PUBLIC_FAUNA_API_KEY}` });
 const q = faunadb.query;
 
 export const myFaunaClient = {

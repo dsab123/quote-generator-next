@@ -2,8 +2,15 @@ import Head from 'next/head'
 import { Backgrounds } from '../components/Backgrounds';
 import { Controls } from '../components/Controls';
 import { Error } from '../components/Error';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { loadQuotesAsync } from '../store/quotesSlice';
+
 
 export default function Home() {
+  const dispatch = useDispatch();
+  useEffect(() => {dispatch(loadQuotesAsync())}, [dispatch]);
+
   return (
     <>
       <Head>
