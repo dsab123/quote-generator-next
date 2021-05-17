@@ -1,21 +1,23 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ReactTooltip from 'react-tooltip';
 import { selectQuotes, setFontFamily } from '../store/quotesSlice';
-import 'tailwindcss/tailwind.css';
+import dynamic from 'next/dynamic';
+
+const ReactTooltip = dynamic(() => import('react-tooltip'), {
+    ssr: false
+  });
 
 export function FontControl() {
     const dispatch = useDispatch();
     const quotesState = useSelector(selectQuotes);
     const quote = quotesState.data[quotesState.selectedIndex];
-    
-    return <div suppressHydrationWarning={true}>
-            { process.browser &&
+
+    return <>
             <div 
                 data-tip data-for="fontControl"
                 className="bg-red-400 hover:bg-red-600 text-white font-bold font-italic py-2 px-4 rounded xs:mt-2 ml-3">
                 f
-            </div> &&
+            </div>
             <ReactTooltip 
                 id='fontControl'
                 type='error'
@@ -46,6 +48,5 @@ export function FontControl() {
                     </button>
                 </div>
             </ReactTooltip>
-            }
-        </div>;
+        </>;
 }

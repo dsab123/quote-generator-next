@@ -21,7 +21,6 @@ import {
 import { randomButtonText } from '../types';
 import { FontControl } from '../components/FontControl';
 
-// todo rename this pls
 export function Controls() {
     const dispatch = useDispatch();
     const backgroundsState = useSelector(selectBackgrounds);
