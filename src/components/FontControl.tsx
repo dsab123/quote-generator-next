@@ -9,15 +9,16 @@ export function FontControl() {
     const quotesState = useSelector(selectQuotes);
     const quote = quotesState.data[quotesState.selectedIndex];
     
-    return <>
+    return <div suppressHydrationWarning={true}>
+            { process.browser &&
             <div 
-                data-tip data-for="happyFace"
+                data-tip data-for="fontControl"
                 className="bg-red-400 hover:bg-red-600 text-white font-bold font-italic py-2 px-4 rounded xs:mt-2 ml-3">
                 f
-            </div>
+            </div> &&
             <ReactTooltip 
-                id='happyFace' 
-                type='error' 
+                id='fontControl'
+                type='error'
                 delayHide={300} 
                 delayShow={0}
                 effect='solid' 
@@ -45,5 +46,6 @@ export function FontControl() {
                     </button>
                 </div>
             </ReactTooltip>
-        </>;
+            }
+        </div>;
 }
