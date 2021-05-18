@@ -86,8 +86,6 @@ There is a _looong_ list of features I have yet to add to this app, some of whic
 * Code
     * stop exporting random crap all over the place in the slices
     * move the top and left percentage to the quote to retain positional history
-* Infrastructure
-    * move over to Next to facilitate logins and quote saving/loading
 
 As for problems, the biggest one right now is that I'm only storing the **url** of the image, so I have to re-fetch images that I've fetched before every time the user uses the prev and next controls. There's _gotta_ be a way to solve this, but I'm honeslty not sure exactly how to do that yet.
 
