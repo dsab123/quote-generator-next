@@ -54,7 +54,7 @@ export function Backgrounds() {
                          left: `${quote.leftPercentage}%`,
                          transform: 'translate(-50%, -50%)'
                     }}>
-                        <p className={`text-2xl font-${quote.fontFamily}`}>
+                        <p className={`text-2xl ${quote.fontFamily}`}>
                             {quote.quote}
                         </p>
                         <p className="text-md">

@@ -33,17 +33,17 @@ export function FontControl() {
                 <div className="flex flex-col justify-center items-center xs:p-2 sm:p-4 bg-red-900 rounded">
                     <button
                         className={`${quote?.fontFamily === 'open-sans' ? "bg-red-600" : "bg-red-400 hover:bg-red-600"} text-white font-bold py-2 px-4 rounded xs:mt-2 ml-3`}
-                        onClick={() => dispatch(setFontFamily('open-sans'))}>
+                        onClick={() => dispatch(setFontFamily('font-open-sans'))}>
                             <p className="font-open-sans">Open Sans</p>
                     </button>
                     <button
                         className={`${quote?.fontFamily === 'playfair-display' ? "bg-red-600" : "bg-red-400 hover:bg-red-600"} text-white font-bold py-2 px-4 rounded xs:mt-2 ml-3`}
-                        onClick={() => dispatch(setFontFamily('playfair-display'))}>
+                        onClick={() => dispatch(setFontFamily('font-playfair-display'))}>
                             <p className="font-playfair-display">Playfair Display</p>
                     </button>
                     <button
                         className={`${quote?.fontFamily === 'roboto-slab' ? "bg-red-600" : "bg-red-400 hover:bg-red-600"} text-white font-bold py-2 text-md px-4 rounded xs:mt-2 ml-3`}
-                        onClick={() => dispatch(setFontFamily('roboto-slab'))}>
+                        onClick={() => dispatch(setFontFamily('font-roboto-slab'))}>
                             <p className="font-roboto-slab">Roboto Slab</p>
                     </button>
                 </div>
