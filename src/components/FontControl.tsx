@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectQuotes, setFontFamily } from '../store/quotesSlice';
+import { selectQuotes, setFontFamily } from 'store/quotesSlice';
 import dynamic from 'next/dynamic';
 
 const ReactTooltip = dynamic(() => import('react-tooltip'), {

@@ -10,20 +10,20 @@ import quotesReducer, {
     decreaseTopPercentage,
     decreaseLeftPercentage,
     setFontFamily
-} from '../store/quotesSlice';
+} from 'store/quotesSlice';
 import { 
     selectQuote, 
     loadQuotes, 
     setQuoteIndex, 
     loadQuotesAsync 
-} from '../store/quotesSlice';
+} from 'store/quotesSlice';
 import { 
     Quotes, 
     LOGIC_ERROR_STATUS, 
     LOGIC_ERROR_MESSAGE, 
     INTERNAL_ERROR_MESSAGE, 
     INTERNAL_ERROR_STATUS 
-} from '../types';
+} from 'types';
 
 const initialState: Quotes = {
     data: [],

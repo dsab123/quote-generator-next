@@ -1,5 +1,5 @@
-import { CreateQuote } from './QuoteFactory';
-import { Quote } from '../types';
+import { CreateQuote } from 'utils/QuoteFactory';
+import { Quote } from 'types';
 const faunadb = require('faunadb');
 const faunaClient = new faunadb.Client({ secret: `${process.env.NEXT_PUBLIC_FAUNA_API_KEY}` });
 const q = faunadb.query;

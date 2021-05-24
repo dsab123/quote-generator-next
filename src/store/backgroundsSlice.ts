@@ -2,15 +2,15 @@ import {
     Backgrounds, 
     INTERNAL_ERROR_STATUS, 
     OK_STATUS 
-} from '../types';
+} from 'types';
 import { 
     createSlice, 
     PayloadAction 
 } from '@reduxjs/toolkit';
 import { AppThunk, RootState } from '.';
 import { createApi } from 'unsplash-js';
-import { raiseError } from './errorSlice';
-import { Background } from '../types';
+import { raiseError } from 'store/errorSlice';
+import { Background } from 'types';
 
 export const defaultBlurHash = 'LEHV6nWB2yk8pyo0adR*.7kCMdnj';
 

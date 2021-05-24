@@ -5,7 +5,7 @@ import { Error } from '../components/Error';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { loadQuotesAsync } from '../store/quotesSlice';
-
+import React from 'react';
 
 export default function Home() {
   const dispatch = useDispatch();

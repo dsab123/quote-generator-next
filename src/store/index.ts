@@ -1,9 +1,10 @@
 import { configureStore, ThunkAction, Action, Middleware } from '@reduxjs/toolkit';
-import errorReducer from './errorSlice';
-import backgroundsReducer from './backgroundsSlice';
-import quotesReducer from './quotesSlice';
 import thunk from 'redux-thunk';
 import axios from 'axios';
+import errorReducer from 'store/errorSlice';
+import backgroundsReducer from 'store/backgroundsSlice';
+import quotesReducer from 'store/quotesSlice';
+
 
 let middleware: Array<Middleware> = [];
 middleware.push(thunk.withExtraArgument(axios));

@@ -1,4 +1,4 @@
-import { Quote } from '../types';
+import { Quote } from 'types';
 
 export const CreateQuote = (id: number, author: string, quote: string) : Quote => {
     return {

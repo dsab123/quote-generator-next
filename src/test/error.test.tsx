@@ -1,10 +1,10 @@
-import { dismissError, raiseError } from '../store/errorSlice';
-import errorReducer from '../store/errorSlice';
+import { dismissError, raiseError } from 'store/errorSlice';
+import errorReducer from 'store/errorSlice';
 import { 
     Error, 
     LOGIC_ERROR_MESSAGE, 
     LOGIC_ERROR_STATUS 
-} from '../types';
+} from 'types';
 
 const initialState: Error = {
     statusCode: 200,

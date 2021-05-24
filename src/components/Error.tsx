@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { dismissError, selectError } from '../store/errorSlice';
+import { dismissError, selectError } from 'store/errorSlice';
 
 export function Error() {
     const errorState = useSelector(selectError);

@@ -10,16 +10,16 @@ import {
     setUnderlined,
     increaseTopPercentage,
     decreaseTopPercentage
-} from '../store/quotesSlice';
+} from 'store/quotesSlice';
 import {  
     requestBackground, 
     selectBackgrounds, 
     setNextBackgroundIndex, 
     setPreviousBackgroundIndex, 
     setRandomBackgroundIndex,
-} from '../store/backgroundsSlice';
-import { randomButtonText } from '../types';
-import { FontControl } from '../components/FontControl';
+} from 'store/backgroundsSlice';
+import { randomButtonText } from 'types';
+import { FontControl } from 'components/FontControl';
 
 export function Controls() {
     const dispatch = useDispatch();

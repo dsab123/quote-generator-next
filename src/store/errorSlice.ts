@@ -3,7 +3,7 @@ import {
     PayloadAction 
 } from '@reduxjs/toolkit';
 import { RootState } from '.';
-import { Error, OK_STATUS } from '../types';
+import { Error, OK_STATUS } from 'types';
 
 const initialState: Error = {
     statusCode: OK_STATUS,

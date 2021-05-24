@@ -6,14 +6,14 @@ import {
     setRandomBackgroundIndex, 
     setNextBackgroundIndex, 
     setPreviousBackgroundIndex, 
-} from '../store/backgroundsSlice';
-import backgroundReducer from '../store/backgroundsSlice';
+} from 'store/backgroundsSlice';
+import backgroundReducer from 'store/backgroundsSlice';
 import { 
     Background, 
     Backgrounds, 
     INTERNAL_ERROR_STATUS, 
     OK_STATUS 
-} from '../types';
+} from 'types';
 import { PayloadAction } from '@reduxjs/toolkit';
 
 const initialState: Backgrounds = {

@@ -4,8 +4,8 @@ import {
     defaultBlurHash, 
     selectBackgrounds, 
     setBackgroundLoaded
-} from '../store/backgroundsSlice'
-import { selectQuotes } from '../store/quotesSlice';
+} from 'store/backgroundsSlice'
+import { selectQuotes } from 'store/quotesSlice';
 import { Blurhash } from 'react-blurhash';
 
 export function Backgrounds() {

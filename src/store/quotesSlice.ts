@@ -3,12 +3,12 @@ import {
     LOGIC_ERROR_STATUS, 
     INTERNAL_ERROR_MESSAGE, 
     INTERNAL_ERROR_STATUS 
-} from '../types';
+} from 'types';
+import { AppThunk, RootState } from 'store';
+import { raiseError } from 'store/errorSlice';
+import { Quotes } from 'types';
+import { myFaunaClient } from 'utils/Fauna';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AppThunk, RootState } from '../store';
-import { raiseError } from '../store/errorSlice';
-import { Quotes } from '../types';
-import { myFaunaClient } from '../utils/Fauna';
 
 const initialState: Quotes = {
     data: [],
