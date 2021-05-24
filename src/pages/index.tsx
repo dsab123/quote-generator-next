@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { Backgrounds } from '../components/Backgrounds';
-import { Controls } from '../components/Controls';
-import { Error } from '../components/Error';
+import { Backgrounds } from 'components/Backgrounds';
+import { Controls } from 'components/Controls';
+import { Error } from 'components/Error';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { loadQuotesAsync } from '../store/quotesSlice';
+import { loadQuotesAsync } from 'store/quotesSlice';
 import React from 'react';
 
 export default function Home() {
