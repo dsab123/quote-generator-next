@@ -1,13 +1,16 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { Provider as AuthProvider }  from 'next-auth/client'
 import { store } from 'store';
 import 'tailwindcss/tailwind.css'
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
+    <AuthProvider session={pageProps.session}>
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </AuthProvider>
   )
 }
 

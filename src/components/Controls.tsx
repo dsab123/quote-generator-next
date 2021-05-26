@@ -73,7 +73,7 @@ export function Controls() {
                 <p><u>U</u></p>
             </button>
         </div>
-        <div className="flex flex-row items-center w-500px mb-4 p-4 bg-red-900 rounded ">
+        <div className="flex flex-row sm:flex-nowrap xs:flex-wrap justify-center items-center w-500px mb-4 p-4 bg-red-900 rounded ">
             <p className="text-white font-bold">Image</p>
             <button
                 className="bg-red-400 text-white hover:bg-red-600 focus:ring focus:ring-offset-1 disabled:bg-gray-500 disabled:text-gray-200 font-bold py-2 px-4 rounded xs:mt-2 ml-3"
