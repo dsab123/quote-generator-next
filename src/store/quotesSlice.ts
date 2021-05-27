@@ -12,7 +12,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 const initialState: Quotes = {
     data: [],
-    selectedIndex: 0
+    selectedIndex: 0,
+    indexName: 'quotes'
 }
 
 export const quotes = createSlice({

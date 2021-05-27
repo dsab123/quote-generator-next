@@ -1,5 +1,6 @@
 import React from 'react';
 import { signIn, signOut, useSession } from 'next-auth/client';
+import { myFaunaClient } from 'utils/Fauna';
 import dynamic from "next/dynamic";
 
 const ReactTooltip = dynamic(() => import('react-tooltip'), {
@@ -11,7 +12,7 @@ export function Navbar() {
   
     return <>
         <div className="text-left flex flex-row justify-between">
-            <button
+            {/* <button
                 data-tip="Coming Soon!" data-event="click" data-for="createCollection"
                 className="text-gray-500 font-bold py-1 px-2 hover:text-white cursor-pointer rounded">
                 Create Your Own 📃
@@ -34,8 +35,15 @@ export function Navbar() {
                 <p className="text-white text-2xl">
                     Coming Soon!
                 </p>
-            </ReactTooltip>
+            </ReactTooltip> */}
             
+            <button
+                data-tip="Coming Soon!" data-event="click" data-for="createCollection"
+                className="text-gray-500 font-bold py-1 px-2 hover:text-white cursor-pointer rounded"
+                onClick={() => myFaunaClient.createCollection()}>
+                Create Your Own 📃
+            </button>
+
             {!session && <>
                 <button 
                     className="text-white font-bold py-1 px-2 cursor-pointer hover:underline"

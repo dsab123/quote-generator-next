@@ -27,7 +27,8 @@ import {
 
 const initialState: Quotes = {
     data: [],
-    selectedIndex: 0
+    selectedIndex: 0,
+    indexName: 'quotes'
 }
 
 const newState: Quotes = {
@@ -66,7 +67,8 @@ const newState: Quotes = {
             fontFamily: ''
         },
     ],
-    selectedIndex: 0
+    selectedIndex: 0,
+    indexName: 'quotes'
 };
 
 function createQuotesClientMock(): any {
