@@ -6,11 +6,11 @@ export function Navbar() {
   
     return <>
         <div className="text-left flex flex-row justify-between">
-            <span 
+            <button 
                 className="text-gray-400 font-bold py-1 px-2 cursor-pointer hover:text-white"
                 onClick={() => console.log('I\'m a person')}>
                     Create Collection
-            </span>
+            </button>
 
             {!session && <>
                 <button 
