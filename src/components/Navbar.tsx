@@ -14,7 +14,7 @@ export function Navbar() {
 
             {!session && <>
                 <button 
-                    className="text-gray-400 font-bold py-1 px-2 cursor-pointer hover:text-white"
+                    className="text-white font-bold py-1 px-2 cursor-pointer hover:underline"
                     onClick={() => signIn()}>
                         {loading ? 'loading...' : 'Sign in'}
                 </button>
