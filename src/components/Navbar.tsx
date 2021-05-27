@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { signIn, signOut, useSession } from 'next-auth/client';
 import dynamic from "next/dynamic";
 
@@ -14,7 +14,7 @@ export function Navbar() {
             <button
                 data-tip="Coming Soon!" data-event="click" data-for="createCollection"
                 className="text-gray-500 font-bold py-1 px-2 hover:text-white cursor-pointer rounded">
-                Create Quotes Collection 📃
+                Create Your Own 📃
             </button>
             <ReactTooltip 
                 globalEventOff="mouseover"
