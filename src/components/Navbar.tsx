@@ -1,6 +1,5 @@
 import React from "react";
 import { signIn, signOut, useSession } from 'next-auth/client';
-import { CreateCollection } from "faunadb";
 
 export function Navbar() {
     const [ session, loading ] = useSession();
