@@ -11,11 +11,11 @@ export function Navbar() {
   
     return <>
         <div className="text-left flex flex-row justify-between">
-            <div 
+            <button
                 data-tip="Coming Soon!" data-event="click" data-for="createCollection"
-                className="text-gray-400 font-bold py-1 px-2 hover:text-white cursor-pointer rounded">
+                className="text-gray-500 font-bold py-1 px-2 hover:text-white cursor-pointer rounded">
                 Create Quotes Collection 📃
-            </div>
+            </button>
             <ReactTooltip 
                 globalEventOff="mouseover"
                 id='createCollection'
