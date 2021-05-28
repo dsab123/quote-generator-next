@@ -12,8 +12,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 const initialState: Quotes = {
     data: [],
-    selectedIndex: 0,
-    indexName: 'quotes'
+    dataIndex: 0,
+    collectionName: 'quotes'
 }
 
 export const quotes = createSlice({
@@ -24,58 +24,58 @@ export const quotes = createSlice({
             state.data = action.payload.data;
         },
         setQuoteIndex: (state, action: PayloadAction<number>) => {
-            state.selectedIndex = action.payload;
+            state.dataIndex = action.payload;
         },
         setRandomQuoteIndex: (state) => {
             // returns an index within our data array bounds
             let candidateIndex = 0;
 
-            while(candidateIndex === state.selectedIndex) {
+            while(candidateIndex === state.dataIndex) {
                 candidateIndex = Math.abs(Math.floor(Math.random() * state.data.length - 1))
             }
 
-            state.selectedIndex = candidateIndex;
+            state.dataIndex = candidateIndex;
         },
         setNextQuoteIndex: (state) => {
-            state.selectedIndex = Math.abs((state.selectedIndex + 1) % state.data.length);
+            state.dataIndex = Math.abs((state.dataIndex + 1) % state.data.length);
         },
         setPreviousQuoteIndex: (state) => {
-            if (state.selectedIndex === 0) {
-                state.selectedIndex = state.data.length - 1
+            if (state.dataIndex === 0) {
+                state.dataIndex = state.data.length - 1
             } else {
-                state.selectedIndex = Math.abs((state.selectedIndex - 1) % state.data.length);
+                state.dataIndex = Math.abs((state.dataIndex - 1) % state.data.length);
             }
         },
         setItalics: (state, action: PayloadAction<boolean>) => {
-            const selectedQuote = state.data[state.selectedIndex];
+            const selectedQuote = state.data[state.dataIndex];
             selectedQuote.isItalics = action.payload as boolean;
         },
         setBold: (state, action: PayloadAction<boolean>) => {
-            const selectedQuote = state.data[state.selectedIndex];
+            const selectedQuote = state.data[state.dataIndex];
             selectedQuote.isBold = action.payload as boolean;
         },
         setUnderlined: (state, action: PayloadAction<boolean>) => {
-            const selectedQuote = state.data[state.selectedIndex];
+            const selectedQuote = state.data[state.dataIndex];
             selectedQuote.isUnderlined = action.payload as boolean;
         },
         increaseLeftPercentage: (state) => {
-            const selectedQuote = state.data[state.selectedIndex];
+            const selectedQuote = state.data[state.dataIndex];
             selectedQuote.leftPercentage += 5;
         },
         decreaseLeftPercentage: (state) => {
-            const selectedQuote = state.data[state.selectedIndex];
+            const selectedQuote = state.data[state.dataIndex];
             selectedQuote.leftPercentage -= 5;
         },
         increaseTopPercentage: (state) => {
-            const selectedQuote = state.data[state.selectedIndex];
+            const selectedQuote = state.data[state.dataIndex];
             selectedQuote.topPercentage += 5;
         },
         decreaseTopPercentage: (state) => {
-            const selectedQuote = state.data[state.selectedIndex];
+            const selectedQuote = state.data[state.dataIndex];
             selectedQuote.topPercentage -= 5;
         },
         setFontFamily: (state, action: PayloadAction<string>) => {
-            const selectedQuote = state.data[state.selectedIndex];
+            const selectedQuote = state.data[state.dataIndex];
             selectedQuote.fontFamily = action.payload as string;
         }
     }

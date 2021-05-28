@@ -26,7 +26,7 @@ export function Controls() {
     const backgroundsState = useSelector(selectBackgrounds);
     const backgroundsIndex = backgroundsState.selectedIndex;
     const quotesState = useSelector(selectQuotes);
-    const quote = quotesState.data[quotesState.selectedIndex];
+    const quote = quotesState.data[quotesState.dataIndex];
 
     return <>
         <div className="flex flex-row sm:flex-nowrap xs:flex-wrap justify-center items-center mt-3 mb-4 xs:p-2 sm:p-4 bg-red-900 rounded">

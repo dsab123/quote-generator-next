@@ -30,8 +30,8 @@ export interface Quote {
 
 export interface Quotes {
     data: Array<Quote>,
-    selectedIndex: number,
-    indexName: string
+    dataIndex: number,
+    collectionName: string
 }
 
 export const randomButtonText = 'random!';

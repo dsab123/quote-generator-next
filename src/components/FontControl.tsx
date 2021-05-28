@@ -10,7 +10,7 @@ const ReactTooltip = dynamic(() => import('react-tooltip'), {
 export function FontControl() {
     const dispatch = useDispatch();
     const quotesState = useSelector(selectQuotes);
-    const quote = quotesState.data[quotesState.selectedIndex];
+    const quote = quotesState.data[quotesState.dataIndex];
 
     return <>
             <div 

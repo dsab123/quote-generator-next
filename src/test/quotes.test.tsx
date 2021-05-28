@@ -27,8 +27,8 @@ import {
 
 const initialState: Quotes = {
     data: [],
-    selectedIndex: 0,
-    indexName: 'quotes'
+    dataIndex: 0,
+    collectionName: 'quotes'
 }
 
 const newState: Quotes = {
@@ -67,8 +67,8 @@ const newState: Quotes = {
             fontFamily: ''
         },
     ],
-    selectedIndex: 0,
-    indexName: 'quotes'
+    dataIndex: 0,
+    collectionName: 'quotes'
 };
 
 function createQuotesClientMock(): any {
@@ -95,19 +95,19 @@ describe('quotesSlice tests', () => {
     it('setQuoteIndex reducer - index is updated', () => {
         const state = quotesReducer(initialState, setQuoteIndex(3));
         
-        expect(state.selectedIndex).toBe(3);
+        expect(state.dataIndex).toBe(3);
     });
 
     it('setRandomQuoteIndex reducer - new index is not old index', () => {
         const state = quotesReducer(initialState, setRandomQuoteIndex());
         
-        expect(state.selectedIndex).not.toBe(0);
+        expect(state.dataIndex).not.toBe(0);
     });
 
     it('setNextQuoteIndex reducer - end to next index goes to zero', () => {
         const state = quotesReducer(initialState, setNextQuoteIndex());
         
-        expect(state.selectedIndex).not.toBe(0);
+        expect(state.dataIndex).not.toBe(0);
     });
 
     it('setNextQuoteIndex reducer - next index goes up', () => {
@@ -154,43 +154,43 @@ describe('quotesSlice tests', () => {
     it('setItalics reducer - sets italics on quote', () => {
         const state = quotesReducer(newState, setItalics(true));
         
-        expect(state.data[state.selectedIndex].isItalics).toBe(true);
+        expect(state.data[state.dataIndex].isItalics).toBe(true);
     });
 
     it('setItalics reducer - unsets italics on quote', () => {
         const state = quotesReducer(newState, setItalics(false));
         
-        expect(state.data[state.selectedIndex].isItalics).toBe(false);
+        expect(state.data[state.dataIndex].isItalics).toBe(false);
     });
     
     it('setUnderlined reducer - sets isUnderlined on quote', () => {
         const state = quotesReducer(newState, setUnderlined(true));
         
-        expect(state.data[state.selectedIndex].isUnderlined).toBe(true);
+        expect(state.data[state.dataIndex].isUnderlined).toBe(true);
     });
 
     it('setUnderlined reducer - unsets isUnderlined on quote', () => {
         const state = quotesReducer(newState, setUnderlined(false));
         
-        expect(state.data[state.selectedIndex].isUnderlined).toBe(false);
+        expect(state.data[state.dataIndex].isUnderlined).toBe(false);
     });
 
     it('setBold reducer - sets isBold on quote', () => {
         const state = quotesReducer(newState, setBold(true));
         
-        expect(state.data[state.selectedIndex].isBold).toBe(true);
+        expect(state.data[state.dataIndex].isBold).toBe(true);
     });
 
     it('setBold reducer - unsets isBold on quote', () => {
         const state = quotesReducer(newState, setBold(false));
         
-        expect(state.data[state.selectedIndex].isBold).toBe(false);
+        expect(state.data[state.dataIndex].isBold).toBe(false);
     });
 
     it('setFontFamily reducer - fontFamily is set', () => {
         const state = quotesReducer(newState, setFontFamily('fruitSalad'));
         
-        expect(state.data[state.selectedIndex].fontFamily).toBe('fruitSalad');
+        expect(state.data[state.dataIndex].fontFamily).toBe('fruitSalad');
     });
 
 

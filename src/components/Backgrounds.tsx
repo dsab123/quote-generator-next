@@ -15,7 +15,7 @@ export function Backgrounds() {
     const backgroundsIndex = backgroundsState.selectedIndex;
     const quotesState = useSelector(selectQuotes);
     
-    const quotesIndex = quotesState.selectedIndex;
+    const quotesIndex = quotesState.dataIndex;
     const quote = quotesState.data[quotesIndex];
 
     return <>
